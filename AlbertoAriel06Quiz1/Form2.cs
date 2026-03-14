@@ -37,7 +37,14 @@ namespace AlbertoAriel06Quiz1
                 {"E", "F"}
             };
 
-            resultText.Text = "[" + letters[0, 0] + "] [" + letters[0, 1] + "] [" + letters[1, 0] + "] [" + letters[1, 1] + "] [" + letters[2, 0] + "] [" + letters[2, 1] + "]";
+            StringBuilder sb = new StringBuilder();
+
+            foreach (string letter in letters)
+            {
+                sb.Append("[" + letter + "] ");
+            }
+
+            resultText.Text = sb.ToString();
 
 
         }
